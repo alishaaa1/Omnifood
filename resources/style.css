@@ -209,8 +209,8 @@ input[type=submit]:active{
 /*---------------------------------------------*/
 
 header{
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.7)), to(rgba(0,0,0,0.7))), url(img/hero.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.7)), to(rgba(0,0,0,0.7))), url(img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -226,11 +226,21 @@ header{
     transform: translate(-50%,-50%);
 }
 
-.logo{
+.logo
+{
     height: 100px;
     width: auto;
     float: left;
     margin-top: 20px;
+}
+
+.logo-black{
+    
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+    display: none;
 }
 
 .main-nav{
@@ -239,6 +249,7 @@ header{
     margin-top: 55px;
 }
 
+/*Main navigation*/
 .main-nav li{
     display: inline-block;
     margin-left: 40px;
@@ -259,6 +270,46 @@ header{
 .main-nav li a:hover,
 .main-nav li a:active{
    border-bottom: 2px solid #e67e22;
+}
+
+/*Mobile navigation*/
+.mobile-nav-icon{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i{
+    font-size: 200%;
+    color: #fff;
+}
+
+/*Sticky navigation*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav{margin-top: 18px;}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo-black{
+    display: block;
+}
+
+.sticky .logo{
+    display: none;
 }
 
 /*---------------------------------------------*/
@@ -389,8 +440,8 @@ header{
 /*---------------------------------------------*/
 
 .section-testimonials{
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.8))), url(img/back-customers.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.8))), url(img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;   
@@ -491,7 +542,7 @@ cite img{
 /*---------------------------------------------*/
 
 .contact-form{
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -514,6 +565,30 @@ input[type=checkbox]{
 }
 
 *:focus {outline: none;}
+
+.map-box {
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 560px;
+    position: relative;
+    z-index: 0;
+}
+
+.form-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    height: 560px;
+    width: 50%;
+    padding-top: 40px;
+}
 
 /*---------------------------------------------*/
 /* FOOTER*/
@@ -596,4 +671,27 @@ footer p{
     text-align: center;
     color: #888;
     margin-top: 20px;
+}
+
+/*---------------------------------------------*/
+/* Animations*/
+/*---------------------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{
+    opacity: 1;
 }
