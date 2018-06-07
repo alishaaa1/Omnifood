@@ -4,7 +4,7 @@ The website is developed using HTML,CSS and little bit of JQuery.
 The website has following sections:
 Header
 Features
-Meals images
+Favourite Meals images
 How it works
 Cities it is available in
 Customer Testimonials
